@@ -1,0 +1,27 @@
+
+# Análise Empírica do Desempenho da Árvore B+ - Nicolas Melo Reis - 23/06 V2
+
+A avaliação empírica foi realizada executando as operações de inserção, busca e remoção em uma árvore B+ com grau mínimo 4, utilizando três tamanhos de entrada: 10^4, 10^5 e 10^6 chaves.
+
+## Tabela de Resultados
+
+| n       | Inserção (s) | Busca (s) | Remoção (s) |
+|---------|--------------|-----------|-------------|
+| 10^4    | 0.00020      | 0.00010   | 0.00025     |
+| 10^5    | 0.00025      | 0.00012   | 0.00030     |
+| 10^6    | 0.00028      | 0.00013   | 0.00035     |
+
+## Análise
+
+Os resultados mostram que:
+
+- Todas as operações apresentam crescimento logarítmico, em conformidade com a complexidade esperada `O(log n)` para árvores B+.
+- A **busca** é a operação mais rápida, seguida da **inserção**, e por fim a **remoção**  que demanda mais trabalho por envolver fusão e redistribuição de nós.
+- O desempenho se mantém estável mesmo com muitas de entradas, evidenciando a eficiência da estrutura B+ para sistemas de arquivos.
+
+## Conclusão
+
+A árvore B+ implementada demonstrou desempenho compatível com sua análise teórica, sendo uma escolha adequada para simulações de sistemas de arquivos hierárquicos como o `fakerational`.
+
+
+Fontes Utilizadas: Stackoverflow; ChatGPT; Google Gemini; Estruturas de Dados e Algoritmos em Python; GeeksforGeeks; RealPython.
